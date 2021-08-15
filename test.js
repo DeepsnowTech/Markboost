@@ -2,7 +2,7 @@
 
 var MarkdownIt = require('markdown-it')
 
-var md = new MarkdownIt().use(require('./lib/container/index.js'), 'space').use(require('./lib/citation/citation'), 'citation').disable(['code', 'fence', 'blockquote']);
+var md = new MarkdownIt().use(require('./lib/container/index.js')).use(require('./lib/citation')).disable(['code', 'fence', 'blockquote']);
 
 let testInput = `
 ---
@@ -11,7 +11,7 @@ author: Zijian Zhang
 bibtex: ./public/test.bib
 ---
 
---- Equation {id:equ-mc2}
+--- Equation
 $$E=mc^2$$
 ---
 
