@@ -9,9 +9,11 @@
   },
   "scripts": {
     "dev": "http-server",
-    "test": "node ./public/test.js"
+    "test": "node ./public/test.js",
+    "live": "node ./live.js"
   },
   "devDependencies": {
-    "http-server": "^13.0.0"
+    "http-server": "^13.0.0",
+    "node-watch": "^0.7.1"
   }
 }

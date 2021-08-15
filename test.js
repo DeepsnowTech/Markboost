@@ -16,14 +16,14 @@ $$E=mc^2$$
 ---
 
 --- Equation {id:one-one}
-$$1+1$$
+1+1=2
 ---
 
 === Author ===
 
 # 12
 
-=== Figure {src:"./hi.jpg"} 
+=== Figure {src:"./TCard.jpg"} 
 I am a figure
 ===
 
@@ -58,6 +58,12 @@ See Ref.[@zhang2022]
 `
 
 var result = md.render(testInput)
-const fs = require("fs")
+const fs = require("fs");
+const { writeClosed } = require('./lib/helper.js');
 console.log(result)
-fs.writeFileSync("./public/index.html", ["<html>","<head></head><body>", result, "</body></html>"].join(""))
+
+let head = [writeClosed("link", { rel: "stylesheet", type: "text/css", href: "./markboost.css" }), `<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id = "MathJax-script" async src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" >
+</script>`]
+let html = ["<html>", "<head>"].concat(head).concat(["</head><body><div class=\"main\">", result, "</div></body></html>"])
+fs.writeFileSync("./public/index.html", html.join(""))
