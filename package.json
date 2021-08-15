@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@orcid/bibtex-parse-js": "^0.0.25",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.13.13",
+    "markdown-it": "^12.2.0",
+    "mathjax-node": "^2.1.1",
+    "relaxed-json": "^1.0.3"
+  },
+  "scripts": {
+    "dev": "http-server",
+    "test": "node ./public/test.js"
+  },
+  "devDependencies": {
+    "http-server": "^13.0.0"
+  }
+}
