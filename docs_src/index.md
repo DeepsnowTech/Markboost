@@ -1,5 +1,5 @@
 ---
-bibtex: ./public/ref.bib
+bibtex: ./docs_src/ref.bib
 title: "Markboost"
 author:
   givenName: Zi-Jian
@@ -69,6 +69,7 @@ I am the caption of the figure. The above is Irena.
 ===
 =====
 and it will be rendered as in [#fig-irena] .
+
 === Figure {src:"./Irena.jpg", id:"fig-irena"} 
 I am the caption of the figure. The above is Irena.
 ===
@@ -126,8 +127,6 @@ Markboost aims to become the first language for paper drafting. We hope it can h
 ## Open-source academic production
 
 ## Semantic web 
-
-[#code-1]
 
 === CiteList ===
 
