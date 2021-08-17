@@ -14,6 +14,8 @@
   },
   "devDependencies": {
     "http-server": "^13.0.0",
-    "node-watch": "^0.7.1"
+    "hyphenopoly": "^4.12.0",
+    "node-watch": "^0.7.1",
+    "sass": "^1.37.5"
   }
 }

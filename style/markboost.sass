@@ -1,0 +1,159 @@
+$warning-color: rgba(255, 0, 0, 0.7)
+$link-color: #0084d1
+$block-backgroud: rgba(110, 110, 110, 0.1)
+$normal-font-size: 1rem
+
+%block
+    margin: auto
+    border-radius: 0.3rem
+    margin-top: 0.5rem
+    margin-bottom: 0.5rem
+    padding: 0.6rem
+
+%inline-block
+    border-radius: 0.3rem
+    padding: 0rem 0.4rem 0rem 0.4rem
+    margin-left: 0.1rem
+    margin-right: 0.1rem
+    font-size: $normal-font-size
+
+.title
+    font-size: 2rem
+.author-entry
+    font-size: 1.1rem
+.affil-define
+    margin-top: 0.1rem
+    margin-bottom: 0.1rem
+    font-size: 1rem
+
+article
+    margin: auto
+    max-width: 45rem
+    //border: 3px solid gray
+    padding: 10px
+    padding-bottom: 20rem
+
+.warning
+    @extend %block
+    background-color: $warning-color
+    text-align: center
+    color: white
+    &::before
+        content: 'Warning:'
+
+    &-inline
+        @extend %inline-block
+        color: white
+        background-color: $warning-color
+
+.figure-box img
+    display: block
+    max-width: 100%
+    max-height: 25rem
+    margin: auto
+    border-radius: 0.3rem
+
+.figure-box
+    border: 2px solid #00000027
+    border-radius: 0.3rem
+    padding: 1rem
+
+.caption p
+    display: inline
+    text-align: center
+
+.caption::before
+    content: attr(beginning)
+
+.caption
+    text-align: center
+
+.equation
+    @extend %block
+    text-align: center
+    background-color: $block-backgroud
+
+.code-block
+    @extend %block
+    padding: 0.5rem
+    text-align: left
+    background-color: $block-backgroud
+    font-size: 1rem
+
+code
+    @extend %inline-block
+    background-color: $block-backgroud
+
+a
+    text-decoration: none
+    color: $link-color
+
+a:visited
+    color: $link-color
+
+.abstract
+    @extend %block
+    background-color: $block-backgroud
+    width: 85%
+    text-align: left
+    p
+        margin: 0
+        margin-bottom: 0.2rem
+        hyphens: auto
+    &>:first-child::before
+        content: 'Abstract: '
+        font-weight: bold
+ 
+
+.author-box
+    width: 80%
+    margin: auto
+    text-align: center
+
+.author-entry::before
+    content: ","
+
+.author-entry:last-child::before
+    content: "and "
+
+.author-entry:first-child::before
+    content: ""
+
+.affil-link::after
+    content: ","
+
+.affil-link:last-child::after
+    content: ""
+
+.content-table
+    @extend %block
+    //text-align: center
+    background-color: $block-backgroud
+
+    & ul
+        margin: auto
+        list-style-type: none
+.box-quote
+    border: 3px solid gray
+    border-radius: 0.3rem
+
+h1
+    margin: 1rem
+    text-align: center
+    font-size: 1.7rem
+h2
+    margin: 1rem
+    text-align: center
+    font-size: 1.2rem
+h3
+    margin: 1rem
+    text-align: center
+h4
+    margin: 1rem
+    text-align: center
+h5
+    margin: 1rem
+    text-align: center
+h6
+    margin: 1rem
+    text-align: center
