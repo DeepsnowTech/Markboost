@@ -1,0 +1,84 @@
+@import "./vars"
+    
+%block
+    margin: auto
+    border-radius: 0.3rem
+    margin-top: 0.5rem
+    margin-bottom: 0.5rem
+    padding: 0.6rem
+
+.equation
+    @extend %block
+    text-align: center
+    background-color: $block-backgroud
+
+.warning
+    @extend %block
+    background-color: $warning-color
+    text-align: center
+    color: white
+    &::before
+        content: 'Warning:'
+    &-inline
+        @extend %inline-block
+        color: white
+        background-color: $warning-color
+
+.abstract
+    @extend %block
+    background-color: $block-backgroud
+    width: 85%
+    text-align: left
+    p
+        margin: 0
+        margin-bottom: 0.2rem
+        hyphens: auto
+    &>:first-child::before
+        content: 'Abstract: '
+        font-weight: bold
+
+.code-block
+    @extend %block
+    padding: 0.5rem
+    text-align: left
+    background-color: $block-backgroud
+    font-size: 1rem
+
+.content-table
+    @extend %block
+    //text-align: center
+    background-color: $block-backgroud
+
+    & ul
+        margin: auto
+        list-style-type: none
+
+.remark-box
+    @extend %block
+    background-color: $block-backgroud
+    &::before
+        content: attr(name) " " attr(index)
+        font-weight: bold
+.remark-title::before
+    content: "("
+.remark-title::after
+    content: ")"
+
+
+.box-quote
+    @extend %block
+    border: 3px solid gray
+
+figure img
+    display: block
+    max-width: 100%
+    max-height: 25rem
+    margin: auto
+    border-radius: 0.3rem
+
+figure
+    @extend %block
+    border: 2px solid #00000027
+    border-radius: 0.3rem
+
+

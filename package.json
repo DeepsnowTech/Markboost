@@ -5,11 +5,14 @@
     "katex": "^0.13.13",
     "markdown-it": "^12.2.0",
     "mathjax-node": "^2.1.1",
-    "relaxed-json": "^1.0.3"
+    "node-dir": "^0.1.17",
+    "relaxed-json": "^1.0.3",
+    "toml": "^3.0.0"
   },
   "scripts": {
-    "test": "node ./live.js --src ./test/test.md",
-    "docs": "node ./live.js --src ./docs_src/index.md --output ./docs/"
+    "test": "node ./builder/index.js --src ./test/ --output ./test/",
+    "docs": "node ./builder/index.js --src ./docs_src/ --output ./docs/",
+    "watch": "node ./builder/index.js"
   },
   "devDependencies": {
     "http-server": "^13.0.0",

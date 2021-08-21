@@ -1,31 +1,13 @@
-.content-table, .abstract, .code-block, .equation, .warning {
-  margin: auto;
-  border-radius: 0.3rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 0.6rem;
+header {
+  color: white;
+  background-color: #0c549c;
+  padding: 0.7rem;
+  width: 100%;
 }
 
-code, .warning-inline {
-  border-radius: 0.3rem;
-  padding: 0rem 0.4rem 0rem 0.4rem;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-  font-size: 1rem;
-}
-
-.title {
-  font-size: 2rem;
-}
-
-.author-entry {
-  font-size: 1.1rem;
-}
-
-.affil-define {
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-  font-size: 1rem;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 article {
@@ -33,6 +15,49 @@ article {
   max-width: 45rem;
   padding: 10px;
   padding-bottom: 20rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #0084d1;
+}
+
+a:visited {
+  color: #0084d1;
+}
+
+h1 {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+h2 {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+h3, h4, h5, h6 {
+  margin: 1rem;
+  text-align: center;
+}
+
+figure, .box-quote, .remark-box, .content-table, .code-block, .abstract, .warning, .equation {
+  margin: auto;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem;
+}
+
+.equation {
+  text-align: center;
+  background-color: rgba(110, 110, 110, 0.1);
 }
 
 .warning {
@@ -48,58 +73,6 @@ article {
   background-color: rgba(255, 0, 0, 0.7);
 }
 
-.figure-box img {
-  display: block;
-  max-width: 100%;
-  max-height: 25rem;
-  margin: auto;
-  border-radius: 0.3rem;
-}
-
-.figure-box {
-  border: 2px solid #00000027;
-  border-radius: 0.3rem;
-  padding: 1rem;
-}
-
-.caption p {
-  display: inline;
-  text-align: center;
-}
-
-.caption::before {
-  content: attr(beginning);
-}
-
-.caption {
-  text-align: center;
-}
-
-.equation {
-  text-align: center;
-  background-color: rgba(110, 110, 110, 0.1);
-}
-
-.code-block {
-  padding: 0.5rem;
-  text-align: left;
-  background-color: rgba(110, 110, 110, 0.1);
-  font-size: 1rem;
-}
-
-code {
-  background-color: rgba(110, 110, 110, 0.1);
-}
-
-a {
-  text-decoration: none;
-  color: #0084d1;
-}
-
-a:visited {
-  color: #0084d1;
-}
-
 .abstract {
   background-color: rgba(110, 110, 110, 0.1);
   width: 85%;
@@ -113,6 +86,64 @@ a:visited {
 .abstract > :first-child::before {
   content: "Abstract: ";
   font-weight: bold;
+}
+
+.code-block {
+  padding: 0.5rem;
+  text-align: left;
+  background-color: rgba(110, 110, 110, 0.1);
+  font-size: 1rem;
+}
+
+.content-table {
+  background-color: rgba(110, 110, 110, 0.1);
+}
+.content-table ul {
+  margin: auto;
+  list-style-type: none;
+}
+
+.remark-box {
+  background-color: rgba(110, 110, 110, 0.1);
+}
+.remark-box::before {
+  content: attr(name) " " attr(index);
+  font-weight: bold;
+}
+
+.remark-title::before {
+  content: "(";
+}
+
+.remark-title::after {
+  content: ")";
+}
+
+.box-quote {
+  border: 3px solid gray;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 25rem;
+  margin: auto;
+  border-radius: 0.3rem;
+}
+
+figure {
+  border: 2px solid #00000027;
+  border-radius: 0.3rem;
+}
+
+.author-entry {
+  font-size: 1.1rem;
+}
+
+.affil-list p {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.8rem;
 }
 
 .author-box {
@@ -133,55 +164,50 @@ a:visited {
   content: "";
 }
 
-.affil-link::after {
+.author-sup-link::after {
   content: ",";
 }
 
-.affil-link:last-child::after {
+.author-sup-link:last-child::after {
   content: "";
 }
 
-.content-table {
+code, .warning-inline {
+  border-radius: 0.3rem;
+  padding: 0rem 0.4rem 0rem 0.4rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  font-size: 1rem;
+}
+
+.em2 {
+  border-bottom: 1px solid #000;
+}
+
+.em3 {
+  border: 1px solid #000000;
+  padding: 1px;
+}
+
+.cite-links::before {
+  content: "[";
+}
+.cite-links::after {
+  content: "]";
+}
+
+code {
   background-color: rgba(110, 110, 110, 0.1);
 }
-.content-table ul {
-  margin: auto;
-  list-style-type: none;
+
+.caption p {
+  display: inline;
 }
 
-.box-quote {
-  border: 3px solid gray;
-  border-radius: 0.3rem;
+.caption::before {
+  content: attr(beginning);
 }
 
-h1 {
-  margin: 1rem;
-  text-align: center;
-  font-size: 1.7rem;
-}
-
-h2 {
-  margin: 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-h3 {
-  margin: 1rem;
-  text-align: center;
-}
-
-h4 {
-  margin: 1rem;
-  text-align: center;
-}
-
-h5 {
-  margin: 1rem;
-  text-align: center;
-}
-
-h6 {
-  margin: 1rem;
+.caption {
   text-align: center;
 }

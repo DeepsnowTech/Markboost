@@ -1,0 +1,27 @@
+.author-entry
+    font-size: 1.1rem
+    
+.affil-list p
+    margin-top: 0.1rem
+    margin-bottom: 0.1rem
+    font-size: 0.8rem
+
+.author-box
+    width: 80%
+    margin: auto
+    text-align: center
+
+.author-entry::before
+    content: ","
+
+.author-entry:last-child::before
+    content: "and "
+
+.author-entry:first-child::before
+    content: ""
+
+.author-sup-link::after
+    content: ","
+
+.author-sup-link:last-child::after
+    content: ""

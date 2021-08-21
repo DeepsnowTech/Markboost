@@ -1,0 +1,24 @@
+@import "./vars"
+    
+%inline-block
+    border-radius: 0.3rem
+    padding: 0rem 0.4rem 0rem 0.4rem
+    margin-left: 0.1rem
+    margin-right: 0.1rem
+    font-size: $normal-font-size
+
+.em2
+    border-bottom: 1px solid #000
+.em3
+    border: 1px solid #000000
+    padding: 1px
+
+.cite-links
+    &::before
+        content: "["
+    &::after
+        content: "]"
+
+code
+    @extend %inline-block
+    background-color: $block-backgroud
